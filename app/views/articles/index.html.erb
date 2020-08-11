@@ -1,0 +1,7 @@
+<h3><%= link_to "⨁ add an article", new_article_path %></h3>
+
+<% @articles.each do |art| %>
+<p>------------</p>
+<p> <%= link_to art.title, article_path(art) %> </p>
+<p> <%= link_to "🖋", edit_article_path(art) %> <%= link_to "🗑", article_path(art), method: :delete, data: { confirm: "Are you sure you want to delete?"} %> </p>
+<% end %>

@@ -1,0 +1,11 @@
+<h2> Edit: <%= @article.title %> </h2>
+<p> <%= @article.content %> </p>
+
+<%= form_for @article, url: {action: "update"} do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :content %>
+<%= f.text_field :content %>
+<%= f.submit %>
+
+<% end %>
